@@ -6,6 +6,7 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <title>ALIF FOUNDATION</title>
     <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/scss/global.css">
 </head>
 <body>
@@ -205,6 +206,60 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="billing-details">
+                                <div class="row">
+                                    <div class="col col-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Nationality</label>
+                                            <select class="select2 select2-country" name="state">
+                                                <option value="AL">Türkiye</option>
+                                                <option value="WY">Almanya</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label>State</label>
+                                            <select class="select2 select2-state" name="state">
+                                                <option value="AL">İstanbul</option>
+                                                <option value="WY">Rize</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label>District</label>
+                                            <select class="select2 select2-district" name="state">
+                                                <option value="AL">Maltepe</option>
+                                                <option value="WY">Çayeli</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label>Address Line 1</label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label>Address Line 2</label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col col-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Zip / Postal Code</label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col col-12 col-md-12">
+                                        <button type="button" class="donate-btn">
+                                            <span>Donate Now</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -331,8 +386,18 @@
             document.body.classList.remove('fixed-nav');
         }
         }
-
         window.addEventListener('scroll', stickyNavigation);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2({
+                placeholder: "Please make your chaice",
+                theme: 'bootstrap',
+                width: 'style',
+            });
+        });
     </script>
 </body>
 </html>
